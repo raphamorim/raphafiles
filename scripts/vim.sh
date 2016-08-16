@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# use vim7.4 (autocomplete)
+echo "\n+ Update vim to 7.4 with Lua"
+brew install vim --with-lua --override-system-vim
+
 mkdir ~/.vim && cp configs/vimrc ~/.vimrc
 echo "\n+ Lucario Color Scheme..."
 mkdir -p ~/.vim/colors && cd ~/.vim/colors
@@ -12,4 +16,7 @@ echo "\n+ Vim Airline..."
 git clone https://github.com/bling/vim-airline ~/.vim/bundle/vim-airline
 echo "\n+ Installing Powerline..."
 pip install --user git+git://github.com/Lokaltog/powerline
+
+echo "\n+ Install autocomplete"
+git clone https://github.com/Shougo/neocomplete.vim.git && cd ./neocomplete.vim && mv plugin ~/.vim/ && mv autoload/* ~/.vim/autoload
 
