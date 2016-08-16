@@ -1,4 +1,4 @@
-> RAPHAFILES
+># RAPHILES
 
 ##  Installing
 
@@ -13,3 +13,4 @@ make
 
 - [tmux shortcuts](https://gist.github.com/MohamedAlaa/2961058)
 
+Thanks to [@scorphus](http://github.com/scorphus) by name idea :D

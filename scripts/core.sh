@@ -17,6 +17,8 @@ git config --global user.email rapha850@gmail.com
 git config --global core.editor vim
 echo "\nInstalling Z..."
 brew install z
+echo "\nInstalling httpie..."
+brew install httpie
 echo ". `brew --prefix`/etc/profile.d/z.sh" >> $HOME/.zshrc
 echo "\nInstalling Python..."
 brew install python
