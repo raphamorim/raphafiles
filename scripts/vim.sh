@@ -7,7 +7,7 @@ brew install vim --with-lua --override-system-vim
 mkdir ~/.vim && cp configs/vimrc ~/.vimrc
 echo "\n+ Lucario Color Scheme..."
 mkdir -p ~/.vim/colors && cd ~/.vim/colors
-git clone https://github.com/raphamorim/lucario.git && cp lucario/vim/colors/lucario.vim ~/.vim/colors/lucario.vim
+git clone https://github.com/raphamorim/lucario.git && cp ./lucario/colors/lucario.vim ~/.vim/colors/lucario.vim
 echo "\n+ Pathogen..."
 mkdir -p ~/.vim/autoload && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 echo "\n+ NERDTree..."
