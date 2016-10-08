@@ -14,6 +14,10 @@ echo "\n+ NERDTree..."
 mkdir ~/.vim/bundle && cd ~/.vim/bundle && git clone https://github.com/scrooloose/nerdtree.git
 echo "\n+ Vim Airline..."
 git clone https://github.com/bling/vim-airline ~/.vim/bundle/vim-airline
+echo "\n+ Command-T..."
+cd ~/.vim && git clone https://github.com/wincent/command-t.git bundle/command-t
+cd ~/.vim/bundle/command-t && git pull
+cd ~/.vim/bundle/command-t/ruby/command-t && ruby extconf.rb && make
 echo "\n+ Installing Powerline..."
 pip install --user git+git://github.com/Lokaltog/powerline
 
