@@ -131,15 +131,23 @@ nnoremap <C-j> <C-x>
 cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
 
 " tab navigation
-nnoremap <C-t><C-h>     :split<CR>
-nnoremap <C-t><C-v>     :vsplit<CR>
-nnoremap <C-t><C-w>     :hide<CR>
+nnoremap <C-i><C-h>     :split<CR>
+nnoremap <C-i><C-v>     :vsplit<CR>
+nnoremap <C-i><C-w>     :hide<CR>
 nnoremap <C-x>     :NERDTreeToggle<CR>
 
-inoremap <C-t><C-h>     <Esc>:split<CR>
-inoremap <C-t><C-v>     <Esc>:vsplit<CR>
-inoremap <C-t><C-w>     <Esc>:hide<CR>
+inoremap <C-i><C-h>     <Esc>:split<CR>
+inoremap <C-i><C-v>     <Esc>:vsplit<CR>
+inoremap <C-i><C-w>     <Esc>:hide<CR>
 inoremap <C-x>          <Esc>:NERDTreeToggle<CR>
+
+" Command-T https://github.com/wincent/command-t/blob/master/doc/command-t.txt
+nnoremap <C-t>   :CommandT<CR>:pwd<CR>
+inoremap <C-t>   <Esc>:CommandT<CR>:pwd<CR>
+
+let g:CommandTMaxHeight = 20
+let g:CommandTMaxFiles = 500000
+let g:CommandTSmartCase = 1
 
 set cursorline " Highlight current line
 set expandtab " Expand tabs to spaces
@@ -257,3 +265,9 @@ else
   let g:airline_symbols.linenr = ''
 endif
 
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 2
