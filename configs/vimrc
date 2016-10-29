@@ -198,7 +198,8 @@ let g:NERDTreeShowBookmarks=1
 let g:nerdtree_tabs_focus_on_files=1
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 35
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite,*/node_modules/*,.git,*.o
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite,*/node_modules/*,.git,*.o,*/target/debug/*
+
 
 " Disable visualbell
 set visualbell t_vb=
@@ -322,4 +323,19 @@ endfunction
 
 nnoremap <leader><Space> :call ToggleComment()<cr>
 vnoremap <leader><Space> :call ToggleComment()<cr>
+
+nnoremap <leader>a     :bp<cr>
+vnoremap <leader>a     :bp<cr>
+nnoremap <leader>s     :bn<cr>
+vnoremap <leader>s     :bn<cr>
+nnoremap <leader>w     :bw<cr>
+vnoremap <leader>w     :bw<cr>
+
+" https://github.com/fatih/vim-go
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 

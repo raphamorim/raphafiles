@@ -24,6 +24,9 @@ pip install --user git+git://github.com/Lokaltog/powerline
 echo "\n+ Setup Rust"
 git clone --depth=1 https://github.com/rust-lang/rust.vim.git ~/.vim/bundle/rust.vim
 
+echo "\n+ Setup Golang"
+git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
+
 echo "\n+ Install autocomplete"
 git clone https://github.com/Shougo/neocomplete.vim.git && cd ./neocomplete.vim && mv plugin ~/.vim/ && mv autoload/* ~/.vim/autoload
 
