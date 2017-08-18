@@ -1,0 +1,16 @@
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+  dci= duet-commit
+	st = status
+	lp = log --graph --decorate -20 --oneline
+	la = log --all --graph --decorate -20 --oneline
+  rup = remote update --prune
+[user]
+	name = Raphael Amorim
+	email = rapha850@gmail.com
+[core]
+	editor = vim
+[rebase]
+  autosquash = true
